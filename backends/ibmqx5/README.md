@@ -115,33 +115,32 @@ A frame change (FC) is equivalent to applying a virtual *Z*-gate in software, wh
 
 All the GD have a gate time of 80 ns, and the gate times for all GF pulses used in CX gates are given in the table below (rounded to nearest ns). There is an additional buffer of 10 ns after each GD or GF pulse. 
 
+
+
 | CX Gate | GF Gate Time (ns) |
 |----|----|
-| **CX1_0**   | 383 |
+| **CX1_0**   | 391 |
 | **CX1_2**   | 260 |
 | **CX2_3**   | 230 |
 | **CX3_4**  | 252 |
-| **CX3_14** | 283|
+| **CX3_14** | 326|
 | **CX5_4**   | 267|
 | **CX6_5**   | 261 |
 | **CX6_7**   | 170 |
 |**CX6_11**| 174 |
-|**CX7_10**| 296 |
+|**CX7_10**| 289 |
 | **CX8_7**  | 265 |
-| **CX9_8**  | 239 |
+| **CX9_8**  | 174 |
 | **CX9_10**   | 209 |
 | **CX11_10**   | 196 |
-| **CX12_5** | 270 |
+| **CX12_5** | 339 |
 | **CX12_11**  | 213|
-| **CX12_13** | 200 |
+| **CX12_13** | 244 |
 | **CX13_4**  | 240 |
 | **CX13_14**  | 205 |
-| **CX15_0** | 317 |
-| **CX15_2**  | 391 |
-| **CX15_14** | 183 |
-
-
-
+| **CX15_0** | 361 |
+| **CX15_2**  | 270 |
+| **CX15_14** | 196 |
 
 
 
