@@ -1,28 +1,25 @@
-# IBM QX2: Sparrow
+# IBM QX2 V1.x.x
 
-This document contains information about the IBM Q experience **ibmqx2** backend. 
+**backend_name**: ibmqx2  
+**backend_version**: 1.x.x   
+**sample_name**: sparrow 
+
+This document contains information about the IBM Q experience **ibmqx2** backend for version 1.x.x. 
 
 ## Contributors (alphabetical)
-Baleegh Adbo, Lev Bishop, Markus Brink, Jerry Chow, Antonio Córcoles, Andrew Cross, Jay M. Gambetta, Oblesh Jinka, Sami Rosenblatt, Jim Rozen, Maika Takita
+Baleegh Adbo, Lev Bishop, Markus Brink, Jerry Chow, Antonio Córcoles, Andrew Cross, Jay M. Gambetta, Oblesh Jinka, Abhinav Kandala, Sami Rosenblatt, Jim Rozen, Maika Takita
+"../images/
 
-## Status History 
-This device went online January 24th 2017.
 
 ## Device Specifications
-
-The connectivity map for the CNOTS in this device is
-```
-coupling_map = {0: [1, 2], 1: [2], 3: [2, 4], 4: [2]}
-```
-Where a: [b] means a CNOT with qubit a as control and b as target can be implemented.
 
 The connectivity is provided by two coplanar waveguide (CPW) resonators with resonances around 6.0 GHz (coupling Q2, Q3 and Q4) and 6.5 GHz (coupling Q0, Q1 and Q2). Each qubit has a dedicated CPW for control and readout. The following picture shows the chip layout.
 
 
-<img src="images/ibmqx2-labeled.png?raw=true" width="320">
+<img src="../images/ibmqx2-labeled.png?raw=true" width="320">
 
 
-The following tables shows some of the main experimental parameters for this device:
+The following tables show typical experimental parameters for this device (This particular set was taken for V1.0.0; see the version log for specific parameters):
 
 | Qubit| &omega;<sup>R</sup><sub>i</sub>/2&pi; (GHz)       | &omega;<sub>i</sub>/2&pi;  (GHz)| &delta;<sub>i</sub>/2&pi; (MHz) | &chi;/2&pi; (kHz)| &kappa;/2&pi; (kHz)|
 |----|-------------|--------|-------|--------|-------|
@@ -39,10 +36,10 @@ Crosstalk, which we parameterize by &zeta;<sub>ij</sub> = (E<sub>i+j</sub> - E<s
 
 [^fn1]: J.R. Garbow, D.P. Weitekamp, A. Pines, Bilinear rotation decoupling of homonuclear scalar interactions, Chemical Physics Letters, Volume 93, Issue 5, 1982, Pages 504-509.
 
-<img src="images/zz_sequence.png?raw=true" width="400">
+<img src="../images/zz_sequence.png?raw=true" width="400">
 
 
-In the crosstalk matrix, the error bar is less than 1 kHz for all &zeta;<sub>ij</sub> and a dash indicates an interaction strength for that pair < 25 kHz.
+In the crosstalk matrix, the error bar is less than 1 kHz for all &zeta;<sub>ij</sub> and a dash indicates an interaction strength for that pair < 25 kHz. This crosstalk matrix was taken for V1.0.0 (see version log for specific changes).
 
 
 | &zeta;<sub>ij</sub>/2&pi; (kHz)  |  Q0 |   Q1|  Q2 |Q3   |  Q4 |
@@ -54,32 +51,22 @@ In the crosstalk matrix, the error bar is less than 1 kHz for all &zeta;<sub>ij<
 |   **Q4**|  - |  - |  -34 |  -97 | X  |
  
 
-The relaxation (T<sub>1</sub>) and coherence (T<sub>2</sub>) times for each qubit are given in the following table. T<sub>2</sub> is measured with a Hahn echo experiment. These values are averaged over 100 measurements each, spaced approximately by 12 hours, and performed between March and May 2017. The numbers in parentheses are standard errors of the mean.
-
-| \ |  Q0 |   Q1|  Q2 |Q3   |  Q4 |
-|:-:|---|---|---|---|---|
-|   T<sub>1</sub> (us) | 53.04 (0.64) |  63.94 (1.06)| 52.08 (0.58) | 51.78 (0.55) |  55.80 (0.95)|
-|   T<sub>2</sub> (us)| 48.50 (2.63)  | 35.07 (0.59) | 89.73 (1.82) | 60.93 (1.09) | 84.18 (2.41) |
 
 ## Experimental Setup
 The following cartoon shows a depiction of the device I/O microwave setup:
 
-<img src="images/Ibmqx2-expsetup.png?raw=true" width="320">
+<img src="../images/Ibmqx2-expsetup.png?raw=true" width="320">
 
 ## Gate Specification
-
  
-<img src="images/gatedef_U1U2U3_CNOT.png?raw=true" width="320">
+<img src="../images/gatedef_U1U2U3_CNOT.png?raw=true" width="320">
 
 A frame change (FC) is equivalent to applying a virtual *Z*-gate in software, where *Z*(&theta;)=FC(-&theta;). Gaussian derivative (GD) and Gaussian flattop (GF) pulses are defined with amplitude and angle parameters.
-
-All the GD has a gate time of 83ns and the gate time of GF are {167, 150, 208, 145, 133, 133} ns for {CX0\_1, CX0\_2, CX1\_2, CX3\_2, CX3\_4, CX4\_2} respectively. There is an additional buffer of 7ns after each GD or GF pulse. 
-
 
 ### Two-Qubit Gates
 All currently calibrated two-qubit gates and their directions are defined in the coupling map and shown in the device picture below.  Generally, two-qubit gates are possible between neighboring qubits that are connected by a superconducting bus resonator.  The IBM Q experience uses the cross-resonance interaction as the basis for the CX-gate.  This interaction is stronger when choosing the qubit with higher frequency to be the control qubit, and the lower frequency qubit to be the target, so the frequencies of the qubits determines the direction of the gate.  
 
-<img src="images/ibmqx2-connections.png?raw=true" width="320">
+<img src="../images/ibmqx2-connections.png?raw=true" width="320">
 
 Reported gate errors are measured using simultaneous randomized benchmarking (RB)[^fn2]. RB gives the average error per Clifford gate, which we convert to error per gate according to the set of primitive gates used on QX2.
 
