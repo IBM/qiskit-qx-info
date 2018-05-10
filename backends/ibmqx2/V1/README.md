@@ -8,8 +8,6 @@ This document contains information about the IBM Q experience **ibmqx2** backend
 
 ## Contributors (alphabetical)
 Baleegh Adbo, Lev Bishop, Markus Brink, Jerry Chow, Antonio Córcoles, Andrew Cross, Jay M. Gambetta, Oblesh Jinka, Abhinav Kandala, Sami Rosenblatt, Jim Rozen, Maika Takita
-"../images/
-
 
 ## Device Specifications
 
