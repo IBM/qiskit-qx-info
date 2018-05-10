@@ -6,6 +6,14 @@
 
 This document is a version log for the IBM Q experience **ibmqx2** backend for version 1.x.x. 
 
+# 1.1.1
+
+**Date**: April 25, 2018 9:00 AM
+
+## Changes
+
+Improved readout fidelity for Q2. All other specifications the same as V1.1.0
+
 # 1.1.0
 
 **Date**: December 12, 2017
@@ -45,7 +53,7 @@ All the GD has a gate time of 83ns and the gate time of GF are {190, 170, 230, 1
 
 The connectivity map for the CNOTS in this device is
 ```
-coupling_map = {0: [1, 2], 1: [2], 3: [2, 4], 4: [2]}
+coupling_map = [[0,1],[0,2],[1,2],[3,2],[3,4],[4,2]]
 ```
 Where a: [b] means a CNOT with qubit a as control and b as target can be implemented.
 
