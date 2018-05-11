@@ -13,10 +13,11 @@ For research papers, we encourage authors to acknowledge the IBM Q experience wi
 
   >We acknowledge use of the IBM Q experience for this work. The views expressed are those of the authors and do not reflect the official policy or position of IBM or the IBM Q experience team.
 
-The canonical references for hardware specifications are
+Devices should be cited using the following format (here using ibmqx2 as the example):
 
-* 5-qubit backend: IBM QX team, "ibmqx2 backend specification," (2017). Retrieved from https://ibm.biz/qiskit-ibmqx2
-* 16-qubit backend: IBM QX team, "ibmqx3 backend specification," (2017). Retrieved from https://ibm.biz/qiskit-ibmqx3
+* 5-qubit backend: IBM QX team, "ibmqx2 backend specification V1.1.0," (2018). Retrieved from https://ibm.biz/qiskit-ibmqx2
+
+Please specify the backend name (here ibmqx2) and the version used for taking the data. 
 
 ## Other QISKit projects
 
