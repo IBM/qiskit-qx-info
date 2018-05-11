@@ -6,14 +6,6 @@
 
 This document is a version log for the IBM Q experience **ibmqx2** backend for version 1.x.x. 
 
-# 1.1.1
-
-**Date**: April 25, 2018 9:00 AM
-
-## Changes
-
-Improved readout fidelity for Q2. All other specifications the same as V1.1.0
-
 # 1.1.0
 
 **Date**: December 12, 2017
