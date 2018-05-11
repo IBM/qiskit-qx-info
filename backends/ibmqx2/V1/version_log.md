@@ -55,7 +55,7 @@ The connectivity map for the CNOTS in this device is
 ```
 coupling_map = [[0,1],[0,2],[1,2],[3,2],[3,4],[4,2]]
 ```
-Where a: [b] means a CNOT with qubit a as control and b as target can be implemented.
+Where [a,b] means a CNOT with qubit a as control and b as target can be implemented.
 
 The following tables show typical experimental parameters for this device (This particular set was taken for V1.0.0; see the version log for specific parameters):
 
