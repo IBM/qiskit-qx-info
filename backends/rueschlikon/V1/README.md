@@ -16,11 +16,11 @@ Baleegh Abdo, Vivekananda Adiga, Lev Bishop, Markus Brink, Nicholas Bronn, Jerry
 
 The connectivity on the device is provided by total 22 coplanar waveguide (CPW) "bus" resonators, each of which connects two qubits. The connectivity configuration is shown in the figure below; the colored dots indicate qubits, and the colored bars indicate CPW bus resonators. Three different resonant frequencies are used for the bus resonators. The white bars indicate the buses with a resonant frequency of 6.25 GHz, the grey bars 6.45 GHz, and the black bars 6.65 GHz.    
 
-<img src="images/ibmqx3-bus.png?raw=true" width="750">
+<img src="../images/ibmqx3-bus.png?raw=true" width="750">
 
 Each qubit has a dedicated CPW readout resonator attached (labeled as R) for control and readout. The following picture shows the chip layout.
 
-<img src="images/ibmqx3-labeled.png?raw=true" width="320">
+<img src="../images/ibmqx3-labeled.png?raw=true" width="320">
 
 The following table shows some of the typical experimental parameters for this device (for V1.1.0).
 
@@ -49,7 +49,7 @@ Crosstalk, which we parameterize by &zeta;<sub>ij</sub> = (E<sub>i+j</sub> - E<s
 
 [^fn1]: J.R. Garbow, D.P. Weitekamp, A. Pines, Bilinear rotation decoupling of homonuclear scalar interactions, *Chemical Physics Letters*, Volume 93, Issue 5, 1982, Pages 504-509.
 
-<img src="images/zz_sequence.png?raw=true" width="400">
+<img src="../images/zz_sequence.png?raw=true" width="400">
 
 Here is a typical crosstalk matrix (for V1.1.0), the error bar is less than 1 kHz for all &zeta;<sub>ij</sub> and a dash indicates an interaction strength for that pair < 5 kHz.
 
@@ -77,11 +77,11 @@ Here is a typical crosstalk matrix (for V1.1.0), the error bar is less than 1 kH
 ## Experimental Setup
 The following cartoon shows a depiction of the device I/O microwave setup. We acknowledge MIT-Lincoln lab for providing the traveling-wave parametric amplifiers (TWPA) for this system.   
 
-<img src="images/ibmqx3-expsetup.png?raw=true" width="400">
+<img src="../images/ibmqx3-expsetup.png?raw=true" width="400">
 
 ## Gate Specification
  
-<img src="images/gatedef_U1U2U3_CNOT.png?raw=true" width="320">
+<img src="../images/gatedef_U1U2U3_CNOT.png?raw=true" width="320">
 
 A frame change (FC) is equivalent to applying a virtual *Z*-gate in software, where *Z*(&theta;)=FC(-&theta;). Gaussian derivative (GD) and Gaussian flattop (GF) pulses are defined with amplitude and angle parameters.
 
