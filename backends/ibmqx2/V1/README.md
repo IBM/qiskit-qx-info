@@ -1,4 +1,4 @@
-# IBM QX2 V1.x.x
+# IBM Q 5 Yorktown V1.x.x
 
 **backend_name**: ibmqx2  
 **backend_version**: 1.x.x   
