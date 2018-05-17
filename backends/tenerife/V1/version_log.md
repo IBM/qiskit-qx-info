@@ -1,5 +1,6 @@
-# IBM QX4 V1.x.x Version Log
+# IBM Q 5 Tenerife V1.x.x Version Log
 
+**display_name**: IBM Q 5 Tenerife  
 **backend_name**: ibmqx4  
 **backend_version**: 1.x.x   
 **sample_name**: Raven 

@@ -1,5 +1,6 @@
-# IBM QX2 V1.x.x Version Log
+# IBM Q 5 Yorktown V1.x.x Version Log
 
+**display_name**: IBM Q 5 Yorktown  
 **backend_name**: ibmqx2  
 **backend_version**: 1.x.x   
 **sample_name**: sparrow 

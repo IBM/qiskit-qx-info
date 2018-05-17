@@ -1,6 +1,6 @@
 # IBM Q 16 Rueschlikon V1.x.x
 
-**display_name**: IBM Q 16 Rueschlikon
+**display_name**: IBM Q 16 Rueschlikon  
 **backend_name**: ibmqx5  
 **backend_version**: 1.x.x   
 **sample_name**: albatross 
