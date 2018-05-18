@@ -13,7 +13,7 @@ For research papers, we encourage authors to acknowledge the IBM Q with
 
   >We acknowledge use of the IBM Q for this work. The views expressed are those of the authors and do not reflect the official policy or position of IBM or the IBM Q team.
 
-Devices should be cited using the following format (here using ibmqx2 as the example):
+Devices should be cited using the following format (here using Yorktown as the example):
 
 * 5-qubit backend: IBM Q team, "IBM Q 5 Yorktown backend specification V1.1.0," (2018). Retrieved from https://ibm.biz/qiskit-yortkown
 
