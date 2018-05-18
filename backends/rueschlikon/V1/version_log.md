@@ -21,7 +21,7 @@ Added new gates to the coupling map.
 
 The connectivity map for the CNOTS in this device is
 ```
-coupling_map = {1:[0,2], 2:[3], 3:[4, 14], 5:[4], 6:[5,7,11], 7:[10], 8:[7],9:[8, 10], 11:[10], 12:[5, 11, 13], 13:[4, 14], 15:[0, 2, 14]}
+coupling_map = [[1,0], [1,2], [2,3], [3,4], [3,14], [5,4], [6,5], [6,7], [6,11], [7,10], [8,7], [9,8], [9,10], [11,10], [12,5], [12,11], [12,13], [13,4], [13,14], [15,0], [15,2], [15,14]]
 ```
 Where a: [b] means a CNOT with qubit a as control and b as target can be implemented.
 
