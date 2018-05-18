@@ -1,11 +1,11 @@
-# IBM Q backend information.
+# Backend information.
 
 ## Organization
 
-The *ibmqx-backend-information* repo contains information useful to IBM Q users
+The *qiskit-backend-information* repo contains information useful to QISKit users of the remote IBM Q backends.
 
 ### Backends
-The *backends* directory contains information about the IBM Q backends. At the moment there are documents for available hardware backends. Soon, we will update this to include specifications on various simulation backends. We anticipate the simulation backends to be community-driven as well, and we welcome the inclusion of new ones that can plug into our interface.
+The *backends* directory contains information about the remote IBM Q backends. At the moment there are documents for available hardware backends. Soon, we will update this to include specifications on various remote simulation backends. We anticipate the simulation backends to be community-driven as well, and we welcome the inclusion of new ones that can plug into our interface.
 
 ## Citation format
 
@@ -17,7 +17,7 @@ Devices should be cited using the following format (here using ibmqx2 as the exa
 
 * 5-qubit backend: IBM Q team, "IBM Q 5 Yorktown backend specification V1.1.0," (2018). Retrieved from https://ibm.biz/qiskit-yortkown
 
-Please specify the backend name (here IBM Q 5 Yorktown) and the version used for taking the data. 
+Please specify the name (here IBM Q 5 Yorktown) and the version used for taking the data. 
 
 ## Other QISKit projects
 
