@@ -23,7 +23,7 @@ The connectivity map for the CNOTS in this device is
 ```
 coupling_map = [[1,0], [1,2], [2,3], [3,4], [3,14], [5,4], [6,5], [6,7], [6,11], [7,10], [8,7], [9,8], [9,10], [11,10], [12,5], [12,11], [12,13], [13,4], [13,14], [15,0], [15,2], [15,14]]
 ```
-Where a: [b] means a CNOT with qubit a as control and b as target can be implemented.
+Where [a,b] means a CNOT with qubit a as control and b as target can be implemented.
 
 The following table shows some of the typical experimental parameters for this device.
 
@@ -136,9 +136,9 @@ Initial device online. In this version the device was backend **ibmqx3**
 
 The connectivity map for the CNOTS in this device is
 ```
-coupling_map = {0:[1], 1: [2], 2: [3], 3: [14], 4: [3, 5], 6: [7, 11], 7: [10], 8: [7], 9: [8, 10], 11: [10], 12: [5, 11, 13], 13: [4, 14], 15: [0, 14]}
+coupling_map = [[0,1], [1,2], [2,3], [3,14], [4,3, [4,5], [6,7], [6,11], [7,10], [8,7], [9,8], [9,10], [11,10], [12,5], [12,11], [12,13], [13,4], [13,14], [15,0], [15,14]]
 ```
-Where a: [b] means a CNOT with qubit a as control and b as target can be implemented.
+Where [a,b] means a CNOT with qubit a as control and b as target can be implemented.
 
 The following table shows some of the main experimental parameters for this device.
 
