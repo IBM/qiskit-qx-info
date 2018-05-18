@@ -15,6 +15,14 @@ This document is a version log for the IBM Q experience **ibmqx4** backend for v
 
 Device connectivity changed with respect to 1.1.0: CR2\_4 became CR4\_2
 
+## Device Specifications
+
+The connectivity map for the CNOTS in this device is
+```
+coupling_map = [[1,0],[2,0],[2,1],[3,2],[3,4],[4,2]]
+```
+Where [a,b] means a CNOT with qubit a as control and b as target can be implemented.
+
 ## Gate Specification
  
 All the GD has a gate time of 60ns and the gate time of GF are {110, 152, 200, 250, 150, 400} ns for {CX1\_0, CX2\_0, CX2\_1, CX3\_2, CX3\_4, CX4\_2} respectively. There is an additional buffer of 10ns after each GD or GF pulse. 
@@ -60,7 +68,7 @@ The relaxation (T<sub>1</sub>) and coherence (T<sub>2</sub>) times for each qubi
 
 The connectivity map for the CNOTS in this device is
 ```
-coupling_map = [[1,0],[2,0],[2,1],[2,4],[3,2],[4,2]]
+coupling_map = [[1,0],[2,0],[2,1],[2,4],[3,2],[3,4]]
 ```
 Where [a,b] means a CNOT with qubit a as control and b as target can be implemented.
 
