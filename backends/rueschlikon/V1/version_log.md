@@ -118,9 +118,9 @@ All the GD have a gate time of 80 ns, and the gate times for all GF pulses used 
 | **CX15_2**  | 270 |
 | **CX15_14** | 196 |
 
-## Two Qubit Gates
+### Two Qubit Gates
 
-All currently calibrated two-qubit gates and their directions are defined in the coupling map, and are shown in the device picture below.  
+The gate directions are given by the following diagram. 
 
 <img src="../images/IBMQX5_connections_full.png? raw=true" height="200">
 
@@ -234,7 +234,7 @@ All the GD have a gate time of 80 ns, and the gate times for all GF pulses used 
 
 
 ### Two-Qubit Gates
-
+In two cases in V1.0.0, no gate is possible between neighboring qubits because of degeneracies with spectator qubits that prevent the gate from working in either direction.  
 The gate directions are given by the following diagram.  
 
 <img src="../images/ibmqx3-connections.png?raw=true" height="600">

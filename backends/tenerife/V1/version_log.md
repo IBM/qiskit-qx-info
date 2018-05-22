@@ -27,6 +27,10 @@ Where [a,b] means a CNOT with qubit a as control and b as target can be implemen
  
 All the GD has a gate time of 60ns and the gate time of GF are {110, 152, 200, 250, 150, 400} ns for {CX1\_0, CX2\_0, CX2\_1, CX3\_2, CX3\_4, CX4\_2} respectively. There is an additional buffer of 10ns after each GD or GF pulse. 
 
+### Two-Qubit Gates
+
+The gate directions are given by the following diagram.  
+
 <img src="../images/ibmqx4-connections_1pt2pt0.png?raw=true" width="320">
 
 
@@ -108,5 +112,9 @@ The relaxation (T<sub>1</sub>) and coherence (T<sub>2</sub>) times for each qubi
 
 All the GD has a gate time of 50ns and the gate time of GF are {110, 110, 135, 160, 125, 100} ns for {CX1\_0, CX2\_0, CX2\_1, CX2\_4, CX3\_2, CX3\_4} respectively. There is an additional buffer of 10ns after each GD or GF pulse. 
 
+### Two-Qubit Gates
 
+The gate directions are given by the following diagram.  
+
+<img src="../images/ibmqx4-connections.png?raw=true" width="320">
 
