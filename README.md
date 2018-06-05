@@ -23,6 +23,5 @@ Please specify the name (here IBM Q 5 Yorktown) and the version used for taking 
 
 * [ibmqx user guide](https://github.com/QISKit/ibmqx-user-guides) The users guides for the IBM Q experience.
 * [OpenQasm](https://github.com/QISKit/openqasm) Examples and tools for the OpenQASM intermediate representation.
-* [Python API](https://github.com/QISKit/qiskit-api-py) API Client to use IBM Q experience in Python.
-* [Python SDK](https://github.com/QISKit/qiskit-sdk-py) Software development kit for working with quantum programs in Python.
-* [Tutorials](https://github.com/QISKit/qiskit-tutorial) Jupyter notebooks for using QISKit.
+* [QISKit-Core](https://github.com/QISKit/qiskit-core) Quantum Information Science  kit for working with quantum programs in Python.
+* [QISKit-Tutorials](https://github.com/QISKit/qiskit-tutorial) Jupyter notebooks for using QISKit.
