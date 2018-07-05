@@ -15,6 +15,16 @@ This document is a version log for the IBM Q experience **ibmqx4** backend for v
 
 Device underwent a thermal cycle to room temperature and back to 20 mK.
 
+The following table shows the new qubit frequencies for this device:
+
+| Qubit | &omega;<sub>i</sub>/2&pi;  (GHz)| 
+|----|-------------|--------|
+| **Q0**  | 5.2499   | 
+| **Q1**  | 5.2958   | 
+| **Q2**  | 5.3532   | 
+| **Q3**  | 5.4350   | 
+| **Q4**  | 5.1759   | 
+
 # 1.2.0
 
 **Date**: April 19, 2018
