@@ -7,6 +7,14 @@
 
 This document is a version log for the IBM Q experience **ibmqx4** backend for version 1.x.x. 
 
+# 1.3.0
+
+**Date**: July 5, 2018
+
+## Changes
+
+Device underwent a thermal cycle to room temperature and back to 20 mK.
+
 # 1.2.0
 
 **Date**: April 19, 2018
