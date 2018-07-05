@@ -1,34 +1,28 @@
-# IBM QX5: Albatross
+# IBM Q 16 Rueschlikon V1.x.x
 
-This document contains information about the IBM Q experience **ibmqx5** backend. It is a somewhat reconfigured version of ibmqx3.
+**display_name**: IBM Q 16 Rueschlikon  
+**backend_name**: ibmqx5  
+**backend_version**: 1.x.x   
+**sample_name**: albatross 
+
+This document contains information about the IBM Q experience **ibmqx5** backend for version 1.x.x. 
+
+This device was formally backend **ibmqx3** for version 1.0.0. 
 
 ## Contributors (alphabetical)
 Baleegh Abdo, Vivekananda Adiga, Lev Bishop, Markus Brink, Nicholas Bronn, Jerry Chow, Antonio Córcoles, Andrew Cross, Jay M. Gambetta, Jose Chavez-Garcia, Jared Hertzberg, Oblesh Jinka, George Keefe, David McKay, Salvatore Olivadese, Jason Orcutt, Hanhee Paik, Jack Rohrs, Sami Rosenblatt, Jim Rozen, Martin Sandberg, Dongbing Shao, Sarah Sheldon, Firat Solgun, Maika Takita
 
-
-## Status History 
-This device went online 09/28/2017.
-
-
----
-
 ## Device Specifications 
 
-The connectivity map for the CNOTS in this device is
-```
-coupling_map = {1:[0,2], 2:[3], 3:[4, 14], 5:[4], 6:[5,7,11], 7:[10], 8:[7],9:[8, 10], 11:[10], 12:[5, 11, 13], 13:[4, 14], 15:[0, 2, 14]}
-```
-Where a: [b] means a CNOT with qubit a as control and b as target can be implemented.
+The connectivity on the device is provided by total 22 coplanar waveguide (CPW) "bus" resonators, each of which connects two qubits. The connectivity configuration is shown in the figure below; the colored dots indicate qubits, and the colored bars indicate CPW bus resonators. Three different resonant frequencies are used for the bus resonators. The white bars indicate the buses with a resonant frequency of 6.25 GHz, the grey bars 6.45 GHz, and the black bars 6.65 GHz.    
 
-The connectivity is provided by total 22 coplanar waveguide (CPW) "bus" resonators, each of which connects two qubits. The connectivity configuration is shown in the figure below; the colored dots indicate qubits, and the colored bars indicate CPW bus resonators. Three different resonant frequencies are used for the bus resonators. The white bars indicate the buses with a resonant frequency of 6.25 GHz, the grey bars 6.45 GHz, and the black bars 6.65 GHz.    
-
-<img src="images/ibmqx3-bus.png?raw=true" width="750">
+<img src="../images/ibmqx3-bus.png?raw=true" width="750">
 
 Each qubit has a dedicated CPW readout resonator attached (labeled as R) for control and readout. The following picture shows the chip layout.
 
-<img src="images/ibmqx3-labeled.png?raw=true" width="320">
+<img src="../images/ibmqx3-labeled.png?raw=true" width="320">
 
-The following table shows some of the main experimental parameters for this device.
+The following table shows some of the typical experimental parameters for this device (for V1.1.0).
 
 | Qubit| &omega;<sup>R</sup><sub>i</sub>/2&pi; (GHz)       | &omega;<sub>i</sub>/2&pi;  (GHz)| &delta;<sub>i</sub>/2&pi; (MHz) | &chi;/2&pi; (kHz)| &kappa;/2&pi; (kHz)|
 |----|-------------|--------|-------|--------|-------|
@@ -55,9 +49,9 @@ Crosstalk, which we parameterize by &zeta;<sub>ij</sub> = (E<sub>i+j</sub> - E<s
 
 [^fn1]: J.R. Garbow, D.P. Weitekamp, A. Pines, Bilinear rotation decoupling of homonuclear scalar interactions, *Chemical Physics Letters*, Volume 93, Issue 5, 1982, Pages 504-509.
 
-<img src="images/zz_sequence.png?raw=true" width="400">
+<img src="../images/zz_sequence.png?raw=true" width="400">
 
-In the crosstalk matrix, the error bar is less than 1 kHz for all &zeta;<sub>ij</sub> and a dash indicates an interaction strength for that pair < 5 kHz.
+Here is a typical crosstalk matrix (for V1.1.0), the error bar is less than 1 kHz for all &zeta;<sub>ij</sub> and a dash indicates an interaction strength for that pair < 5 kHz.
 
 | &zeta;<sub>ij</sub>/2&pi; (kHz) | Q0 | Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 | Q11 | Q12 | Q13 | Q14 | Q15 |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
@@ -79,76 +73,21 @@ In the crosstalk matrix, the error bar is less than 1 kHz for all &zeta;<sub>ij<
 | **Q15** | -61 | - | -55 | - | - | - | - | - | - | - | - | - | - | - | -106 | 
 
 
-The relaxation (T<sub>1</sub>) and coherence (T<sub>2</sub>) times for each qubit are given in the following table. T<sub>1</sub> is measured with an inversion recovery experiment, and T<sub>2</sub> is measured with a Hahn echo experiment.  These values are averaged over 12 measurements each for T<sub>1</sub> and T<sub>2</sub>, performed over one week. The numbers in parentheses are the standard deviation. 
-
-| Qubit | T<sub>1</sub> (&mu;s) | T<sub>2</sub> (&mu;s)|
-|----|----|----|
-| **Q0** | 37 (4) | 31 (5) |
-| **Q1** | 35 (4) | 58 (10) |
-| **Q2** | 48 (6) | 64 (7) |
-| **Q3** | 46 (5) | 70 (15) |
-| **Q4** |  49 (8) | 74 (24) |
-| **Q5** | 49 (4) | 50 (5) |
-| **Q6** | 44 (7) | 74 (12) |
-| **Q7** | 37 (4) | 49 (7) |
-| **Q8** | 49 (7) | 68 (19) |
-| **Q9** | 48 (5) | 88 (14) |
-| **Q10** | 28 (21) | 49 (36) |
-| **Q11** | 45 (7) | 86 (16) |
-| **Q12** | 50 (7) | 33 (3) |
-| **Q13** | 48 (6) | 82 (12) |
-| **Q14** | 36 (3) | 65 (6) |
-| **Q15** | 48 (7) | 89 (17) |
-
 
 ## Experimental Setup
 The following cartoon shows a depiction of the device I/O microwave setup. We acknowledge MIT-Lincoln lab for providing the traveling-wave parametric amplifiers (TWPA) for this system.   
 
-<img src="images/ibmqx3-expsetup.png?raw=true" width="400">
+<img src="../images/ibmqx3-expsetup.png?raw=true" width="400">
 
 ## Gate Specification
-
  
-<img src="images/gatedef_U1U2U3_CNOT.png?raw=true" width="320">
+<img src="../images/gatedef_U1U2U3_CNOT.png?raw=true" width="320">
 
 A frame change (FC) is equivalent to applying a virtual *Z*-gate in software, where *Z*(&theta;)=FC(-&theta;). Gaussian derivative (GD) and Gaussian flattop (GF) pulses are defined with amplitude and angle parameters.
 
-All the GD have a gate time of 80 ns, and the gate times for all GF pulses used in CX gates are given in the table below (rounded to nearest ns). There is an additional buffer of 10 ns after each GD or GF pulse. 
-
-
-
-| CX Gate | GF Gate Time (ns) |
-|----|----|
-| **CX1_0**   | 391 |
-| **CX1_2**   | 260 |
-| **CX2_3**   | 230 |
-| **CX3_4**  | 252 |
-| **CX3_14** | 326|
-| **CX5_4**   | 267|
-| **CX6_5**   | 261 |
-| **CX6_7**   | 170 |
-|**CX6_11**| 174 |
-|**CX7_10**| 289 |
-| **CX8_7**  | 265 |
-| **CX9_8**  | 174 |
-| **CX9_10**   | 209 |
-| **CX11_10**   | 196 |
-| **CX12_5** | 339 |
-| **CX12_11**  | 213|
-| **CX12_13** | 244 |
-| **CX13_4**  | 240 |
-| **CX13_14**  | 205 |
-| **CX15_0** | 361 |
-| **CX15_2**  | 270 |
-| **CX15_14** | 196 |
-
-
-
 ### Two-Qubit Gates
 
-All currently calibrated two-qubit gates and their directions are defined in the coupling map, and are shown in the device picture below.  Generally, two-qubit gates are possible between neighboring qubits that are connected by a superconducting bus resonator.  The IBM Q experience uses the cross-resonance interaction as the basis for the CX-gate.  This interaction is stronger when choosing the qubit with higher frequency to be the control qubit and the lower frequency qubit to be the target, so the frequencies of the qubits determines the direction of the gate.  There are some exceptions to the rule of high frequency control/low frequency target: the gate direction must be reversed if the higher levels of the control qubit are degenerate with the target qubit, or if either qubit is coupled to a third (spectator) qubit that has the same frequency or a higher level with the same frequency as the target.  In two cases on the QX5, no gate is possible between neighboring qubits because of degeneracies with spectator qubits that prevent the gate from working in either direction.  
-
-<img src="images/IBMQX5_connections_full.png? raw=true" height="200">
+Generally, two-qubit gates are possible between neighboring qubits that are connected by a superconducting bus resonator.  The IBM Q experience uses the cross-resonance interaction as the basis for the CX-gate.  This interaction is stronger when choosing the qubit with higher frequency to be the control qubit and the lower frequency qubit to be the target, so the frequencies of the qubits determines the direction of the gate.  There are some exceptions to the rule of high frequency control/low frequency target: the gate direction must be reversed if the higher levels of the control qubit are degenerate with the target qubit, or if either qubit is coupled to a third (spectator) qubit that has the same frequency or a higher level with the same frequency as the target. Directions of the two-qubit gates are defined in the [version_log](./version_log.md).  
 
 Reported gate errors are measured using simultaneous randomized benchmarking (RB)[^fn2]. RB gives the average error per Clifford gate, which we convert to error per gate according to the set of primitive gates used on IBMQX5.
 

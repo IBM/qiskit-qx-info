@@ -1,32 +1,32 @@
-# IBM QX4 V1.x.x
+# IBM Q 5 Yorktown V1.x.x
 
-**backend_name**: ibmqx4  
+**display_name**: IBM Q 5 Yorktown  
+**backend_name**: ibmqx2  
 **backend_version**: 1.x.x   
-**sample_name**: raven 
+**sample_name**: sparrow 
 
-This document contains information about the IBM Q experience **ibmqx4** backend for version 1.x.x. 
+This document contains information about the IBM Q experience **ibmqx2** backend for version 1.x.x. 
 
 ## Contributors (alphabetical)
 Baleegh Adbo, Lev Bishop, Markus Brink, Jerry Chow, Antonio Córcoles, Andrew Cross, Jay M. Gambetta, Oblesh Jinka, Abhinav Kandala, Sami Rosenblatt, Jim Rozen, Maika Takita
-
 
 ## Device Specifications
 
 The connectivity is provided by two coplanar waveguide (CPW) resonators with resonances around 6.6 GHz (coupling Q2, Q3 and Q4) and 7.0 GHz (coupling Q0, Q1 and Q2). Each qubit has a dedicated CPW for control and readout. The following picture shows the chip layout.
 
 
-<img src="../images/ibmqx4-labeled.png?raw=true" width="320">
+<img src="../images/ibmqx2-labeled.png?raw=true" width="320">
 
 
-The following tables shows some of the main experimental parameters for this device:
+The following tables show typical experimental parameters for this device (This particular set was taken for V1.0.0; see the version log for specific parameters):
 
 | Qubit| &omega;<sup>R</sup><sub>i</sub>/2&pi; (GHz)       | &omega;<sub>i</sub>/2&pi;  (GHz)| &delta;<sub>i</sub>/2&pi; (MHz) | &chi;/2&pi; (kHz)| &kappa;/2&pi; (kHz)|
 |----|-------------|--------|-------|--------|-------|
-| **Q0**  | 6.52396 | 5.2461   | -330.1    | 410 | -
-| **Q1**  | 6.48078 | 5.3025   | -329.7    | 512 | -
-| **Q2**  | 6.43875 | 5.3562   | -323.0    | 408 | -
-| **Q3**  | 6.58036 | 5.4317   | -327.9    | 434 | -
-| **Q4**  | 6.52698 | 5.1824   | -332.5    | 458 | -
+| **Q0**  | 6.530350 | 5.2723   | -330.3    | 476 | 523
+| **Q1**  | 6.481848 | 5.2145   | -331.9    | 395 | 489
+| **Q2**  | 6.436229 | 5.0289   | -331.2    | 428 | 415
+| **Q3**  | 6.579431 | 5.2971   | -329.4    | 412 | 515
+| **Q4**  | 6.530225 | 5.0561   | -335.5    | 339 | 480
 
 
 where &omega;<sup>R</sup><sub>i</sub> is the resonance frequency of the readout resonator, &omega;<sub>i</sub> = (E<sub>i</sub> - E<sub>0</sub>)/&hbar; is the qubit frequency with i={00001,00010,00100,01000,10000}.  The anharmonicity (&delta;<sub>i</sub>) is the difference between the frequency of the 1-2 transition and the 0-1 transition. That is, it is given by &delta;<sub>i</sub> = (E<sub>2i</sub> - 2E<sub>i</sub>+ E<sub>0</sub> )/&hbar;.  &chi; is the qubit-cavity coupling strength, and &kappa; is the cavity coupling to the environment (&kappa;).
@@ -43,29 +43,30 @@ In the crosstalk matrix, the error bar is less than 1 kHz for all &zeta;<sub>ij<
 
 | &zeta;<sub>ij</sub>/2&pi; (kHz)  |  Q0 |   Q1|  Q2 |Q3   |  Q4 |
 |:-:|---|---|---|---|---|
-|   **Q0**|  X |  -43 | -72  |  - |  - |
-|   **Q1**|  -41 |  X | -16  |  - |  - |
-|   **Q2**| -73  |  -18 |  X | -52  | -90  |
-|   **Q3**|  - |  - |  -51 |  X |  -175 |
-|   **Q4**|  - |  - |  -89 |  -176 | X  |
+|   **Q0**|  X |  -43 | -83  |  - |  - |
+|   **Q1**|  -45 |  X | -25  |  - |  - |
+|   **Q2**| -83  |  -27 |  X | -127  | -38  |
+|   **Q3**|  - |  - |  -127 |  X |  -97 |
+|   **Q4**|  - |  - |  -34 |  -97 | X  |
  
+
 
 ## Experimental Setup
 The following cartoon shows a depiction of the device I/O microwave setup:
 
-<img src="../images/Ibmqx4-expsetup.png?raw=true" width="320">
+<img src="../images/Ibmqx2-expsetup.png?raw=true" width="320">
 
 ## Gate Specification
-
  
 <img src="../images/gatedef_U1U2U3_CNOT.png?raw=true" width="320">
 
 A frame change (FC) is equivalent to applying a virtual *Z*-gate in software, where *Z*(&theta;)=FC(-&theta;). Gaussian derivative (GD) and Gaussian flattop (GF) pulses are defined with amplitude and angle parameters.
 
 ### Two-Qubit Gates
-All currently calibrated two-qubit gates and their directions are defined in the coupling map and shown in the device picture below.  Generally, two-qubit gates are possible between neighboring qubits that are connected by a superconducting bus resonator.  The IBM Q experience uses the cross-resonance interaction as the basis for the CX-gate.  This interaction is stronger when choosing the qubit with higher frequency to be the control qubit, and the lower frequency qubit to be the target, so the frequencies of the qubits determines the direction of the gate.  
+Generally, two-qubit gates are possible between neighboring qubits that are connected by a superconducting bus resonator (see picture below).  The IBM Q experience uses the cross-resonance interaction as the basis for the CX-gate.  This interaction is stronger when choosing the qubit with higher frequency to be the control qubit, and the lower frequency qubit to be the target, so the frequencies of the qubits determines the direction of the gate. There are some exceptions to the rule of high frequency control/low frequency target: the gate direction must be reversed if the higher levels of the control qubit are degenerate with the target qubit, or if either qubit is coupled to a third (spectator) qubit that has the same frequency or a higher level with the same frequency as the target. 
+Directions of the two-qubit gates are defined in the [version_log](./version_log.md).
 
-<img src="../images/ibmqx4-connections.png?raw=true" width="320">
+<img src="../images/ibmqx2_bus.png?raw=true" width="320">
 
 Reported gate errors are measured using simultaneous randomized benchmarking (RB)[^fn2]. RB gives the average error per Clifford gate, which we convert to error per gate according to the set of primitive gates used on QX2.
 
