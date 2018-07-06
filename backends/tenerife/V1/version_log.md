@@ -18,7 +18,7 @@ Device underwent a thermal cycle to room temperature and back to 20 mK.
 The following table shows the new qubit frequencies for this device:
 
 | Qubit | &omega;<sub>i</sub>/2&pi;  (GHz)| 
-|----|-------------|--------|
+|----|--------|
 | **Q0**  | 5.2499   | 
 | **Q1**  | 5.2958   | 
 | **Q2**  | 5.3532   | 
