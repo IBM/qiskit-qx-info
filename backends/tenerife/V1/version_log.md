@@ -1,10 +1,29 @@
-# IBM QX4 V1.x.x Version Log
+# IBM Q 5 Tenerife V1.x.x Version Log
 
+**display_name**: IBM Q 5 Tenerife  
 **backend_name**: ibmqx4  
 **backend_version**: 1.x.x   
 **sample_name**: Raven 
 
 This document is a version log for the IBM Q experience **ibmqx4** backend for version 1.x.x. 
+
+# 1.3.0
+
+**Date**: July 5, 2018
+
+## Changes
+
+Device underwent a thermal cycle to room temperature and back to 20 mK.
+
+The following table shows the new qubit frequencies for this device:
+
+| Qubit | &omega;<sub>i</sub>/2&pi;  (GHz)| 
+|----|--------|
+| **Q0**  | 5.2499   | 
+| **Q1**  | 5.2958   | 
+| **Q2**  | 5.3532   | 
+| **Q3**  | 5.4350   | 
+| **Q4**  | 5.1759   | 
 
 # 1.2.0
 
@@ -14,9 +33,21 @@ This document is a version log for the IBM Q experience **ibmqx4** backend for v
 
 Device connectivity changed with respect to 1.1.0: CR2\_4 became CR4\_2
 
+## Device Specifications
+
+The connectivity map for the CNOTS in this device is
+```
+coupling_map = [[1,0],[2,0],[2,1],[3,2],[3,4],[4,2]]
+```
+Where [a,b] means a CNOT with qubit a as control and b as target can be implemented.
+
 ## Gate Specification
  
 All the GD has a gate time of 60ns and the gate time of GF are {110, 152, 200, 250, 150, 400} ns for {CX1\_0, CX2\_0, CX2\_1, CX3\_2, CX3\_4, CX4\_2} respectively. There is an additional buffer of 10ns after each GD or GF pulse. 
+
+### Two-Qubit Gates
+
+The gate directions are given by the following diagram.  
 
 <img src="../images/ibmqx4-connections_1pt2pt0.png?raw=true" width="320">
 
@@ -59,7 +90,7 @@ The relaxation (T<sub>1</sub>) and coherence (T<sub>2</sub>) times for each qubi
 
 The connectivity map for the CNOTS in this device is
 ```
-coupling_map = [[1,0],[2,0],[2,1],[2,4],[3,2],[4,2]]
+coupling_map = [[1,0],[2,0],[2,1],[2,4],[3,2],[3,4]]
 ```
 Where [a,b] means a CNOT with qubit a as control and b as target can be implemented.
 
@@ -99,5 +130,9 @@ The relaxation (T<sub>1</sub>) and coherence (T<sub>2</sub>) times for each qubi
 
 All the GD has a gate time of 50ns and the gate time of GF are {110, 110, 135, 160, 125, 100} ns for {CX1\_0, CX2\_0, CX2\_1, CX2\_4, CX3\_2, CX3\_4} respectively. There is an additional buffer of 10ns after each GD or GF pulse. 
 
+### Two-Qubit Gates
 
+The gate directions are given by the following diagram.  
+
+<img src="../images/ibmqx4-connections.png?raw=true" width="320">
 

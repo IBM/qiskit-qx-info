@@ -1,5 +1,6 @@
-# IBM QX2 V1.x.x Version Log
+# IBM Q 5 Yorktown V1.x.x Version Log
 
+**display_name**: IBM Q 5 Yorktown  
 **backend_name**: ibmqx2  
 **backend_version**: 1.x.x   
 **sample_name**: sparrow 
@@ -85,5 +86,10 @@ The relaxation (T<sub>1</sub>) and coherence (T<sub>2</sub>) times for each qubi
 
 All the GD has a gate time of 83ns and the gate time of GF are {167, 150, 208, 145, 133, 133} ns for {CX0\_1, CX0\_2, CX1\_2, CX3\_2, CX3\_4, CX4\_2} respectively. There is an additional buffer of 7ns after each GD or GF pulse. 
 
+### Two-Qubit Gates
+
+The gate directions are given by the following diagram.  
+
+<img src="../images/ibmqx2-connections.png?raw=true" width="320">
 
 
