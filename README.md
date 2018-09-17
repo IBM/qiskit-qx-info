@@ -15,7 +15,7 @@ For research papers, we encourage authors to acknowledge the IBM Q with
 
 Devices should be cited using the following format (here using Yorktown as the example):
 
-* 5-qubit backend: IBM Q team, "IBM Q 5 Yorktown backend specification V1.1.0," (2018). Retrieved from https://ibm.biz/qiskit-yortkown
+* 5-qubit backend: IBM Q team, "IBM Q 5 Yorktown backend specification V1.1.0," (2018). Retrieved from https://ibm.biz/qiskit-yorktown
 
 Please specify the name (here IBM Q 5 Yorktown) and the version used for taking the data. 
 
