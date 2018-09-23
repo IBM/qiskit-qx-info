@@ -12,7 +12,7 @@ Baleegh Abdo, Vivekananda Adiga, Lev Bishop, Markus Brink, Nicholas Bronn, Jerry
 
 ## Device Specifications 
 
-The connectivity on the device is provided by total 22 coplanar waveguide (CPW) "bus" resonators, each of which connects two qubits. The connectivity configuration is shown in the figure below; the colored dots indicate qubits, and the colored bars indicate CPW bus resonators. Three different resonant frequencies are used for the bus resonators. The white bars indicate the buses with a resonant frequency of 6.25 GHz, the grey bars 6.45 GHz, and the black bars 6.65 GHz.    
+The connectivity on the device is provided by total 22 coplanar waveguide (CPW) "bus" resonators, each of which connects two qubits. The connectivity configuration is shown in the figure below; the colored dots indicate qubits, and the colored bars indicate CPW bus resonators. Three different resonant frequencies are used for the bus resonators. The white bars indicate the buses with a resonant frequency of 6.25 GHz, the grey bars 6.45 GHz, and the black bars 6.65 GHz. Two of the qubits in the chip are not calibrated due to frequency instability and crosstalk issues. 
 
 <img src="../images/melbourne-bus.png?raw=true" width=750">
 
@@ -23,23 +23,21 @@ Each qubit has a dedicated CPW readout resonator attached (labeled as R) for con
 The following table shows some of the typical experimental parameters for this device (for V1.1.0).
 
 | Qubit| &omega;<sup>R</sup><sub>i</sub>/2&pi; (GHz)       | &omega;<sub>i</sub>/2&pi;  (GHz)|
-|----|-------------|--------|
-| **Q0**  | 6.95518 | 5.1000 |
-| **Q1**  | 7.05693 | 5.2384 | 
-| **Q2**  | 6.97179 | 5.0328 | 
-| **Q3**  | 7.04784 | 4.8961 | 
-| **Q4**  | 6.94523 | 5.0262 | 
-| **Q5**  | 7.07587 | 5.0670 | 
-| **Q6**  | 6.95297 | 4.9237 | 
-| **Q7**  | 7.06667 | 5.0707 | 
-| **Q8**  | 6.96377 | 4.9744 | 
-| **Q9**  | 7.04930 | 4.7381 | 
-| **Q10**  | 6.96707 | 4.9633 | 
-| **Q11**  | 7.05513 | 4.9450 | 
-| **Q12**  | 6.95492 | 5.0046 | 
-| **Q13**  | 7.06722| 4.7598 | 
-| **Q14**  | 6.94433 | 4.9685 | 
-| **Q15**  | 7.07006 | 5.0025 | 
+|----|-------------|--------|-------|--------|-------|
+| **Q0**  | 6.95518 | 5.1000 | -292.8    | 125 | 345 |
+| **Q1**  | 7.05693 | 5.2384 | -291.0    | 153 | 373 |
+| **Q2**  | 6.97179 | 5.0328 | -289.2    | 118 | 440 |
+| **Q3**  | 7.04784 | 4.8961 | -294.0    | 100 | 345 |
+| **Q4**  | 6.94523 | 5.0262 | -290.7    | 81 | 545 |
+| **Q5**  | 7.07587 | 5.0670 | -286.0    | 125 | 372 |
+| **Q6**  | 6.95297 | 4.9237 | -289.2    | 127 | 413 |
+| **Q7**  | 6.96377 | 4.9744 | -287.6    | 120 | 321 |
+| **Q8**  | 7.04930 | 4.7381 | -297.6    | 72 | 299 |
+| **Q9**  | 6.96707 | 4.9633 | -291.5   | 83  | 428 |
+| **Q10**  | 7.05513 | 4.9450 | -290.7   | 100 | 561 |
+| **Q11**  | 6.95492 | 5.0046 | -299.0   | 81  | 550 |
+| **Q12**  | 7.06722| 4.7598 | -289.8   | 108 | 398 |
+| **Q13**  | 6.94433 | 4.9685 | -296.0   | 78 | 545 |
 
 
 where &omega;<sup>R</sup><sub>i</sub> is the resonance frequency of the readout resonator, &omega;<sub>i</sub> = (E<sub>i</sub> - E<sub>0</sub>)/&hbar; is the qubit frequency with i={0...1,0...10,...,01...0,1...0}.  The anharmonicity (&delta;<sub>i</sub>) is the difference between the frequency of the 1-2 transition and the 0-1 transition and is approx. ~290 MHz for all the qubits. That is, it is given by &delta;<sub>i</sub> = (E<sub>2i</sub> - 2E<sub>i</sub>+ E<sub>0</sub> )/&hbar;.  
@@ -52,24 +50,23 @@ Crosstalk, which we parameterize by &zeta;<sub>ij</sub> = (E<sub>i+j</sub> - E<s
 
 Here is a typical crosstalk matrix (for V1.0.0), the error bar is less than 1 kHz for all &zeta;<sub>ij</sub> and a dash indicates an interaction strength for that pair < 5 kHz.
 
-| &zeta;<sub>ij</sub>/2&pi; (kHz) | Q0 | Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 | Q11 | Q12 | Q13 | Q14 | Q15 |
-|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
-| **Q0** | | -50 | - | - |	- | - | - | - | - | - | - | - | - | - | - |  |
-| **Q1** | -50 | | -89 | - | - | - | - | - | - | - | - | - | - | - | -206 | - |
-| **Q2** | - | -90 | | -34 | - | - | - | - | - | - | - | - | - | -147 | - | -|
-| **Q3** | - | - | -34 | | -37 | - | - | - | - | - | - | - | -24 | - | - | - |
-| **Q4** | - | - | - | -39 | | -8 | - | - | - | - | - | -22 | - | - | - | - |
-| **Q5** | - | - | - | - |  | |  | - | - | - |  | - | - | - | - | - |
-| **Q6** | - | - | - | - | - | -12 | | -41 | - | -27 | - | - | - | - | - | - |
-| **Q7** | - | - | - | - | - | - | -38 | | -23 | - | - | - | - | - | - | - |
-| **Q8** | - | - | - | - | - | - | - | -20 | | -58| - | - | - | - | - | - |
-| **Q9** | - | - | - | - | - | - | -28 | - | -58 | | -63 | - | - | - | - | - |
-| **Q10** | - | - | - | - | - | -8 | - | - | - | -65 | | -28 | - | - | - | - |
-| **Q11** | - | - | - | - | -22 | - | - | - | - | - | -26 | | -33 | - | - | - |
-| **Q12** | - | - | - | -25 | - | - | - | - | - | - | - | -31 | | -83 | - | - |
-| **Q13** | - | - | -148 | - | - | - | - | - | - | - | - | - | -46 | | -52 | - |
-| **Q14** | - | -205 | - | - | - | - | - | - | - | - | - | - | - | -53 | |  |
-| **Q15** |  | - | - | - | - | - | - | - | - | - | - | - | - | - |  | |
+| &zeta;<sub>ij</sub>/2&pi; (kHz) | Q0 | Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 | Q11 | Q12 | Q13 |
+|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| **Q0** | | -50 | - | - |	- | - | - | - | - | - | - | - | - | - |
+| **Q1** | -50 | | -89 | - | - | - | - | - | - | - | - | - | - | -206 |
+| **Q2** | - | -90 | | -34 | - | -  | - | - | - | - | - | - | -147 | - |
+| **Q3** | - | - | -34 | | -37 | - | - | - | - | - | - | -24 | - | - |
+| **Q4** | - | - | - | -39 | | -8 | - | - | - | - | -22 | - | - | - |
+| **Q5** | - | - | - | - |  | |  | -  | - |  | - | - | - | - |
+| **Q6** | - | - | - | - | - | -12 |  | - | -27 | - | - | - | - | - |
+| **Q7** | - | - | - | - | - | - | -  | | -58| - | - | - | - | - |
+| **Q8** | - | - | - | - | - | - | -28 | -58 | | -63 | - | - | - | - |
+| **Q9** | - | - | - | - | - | -8 | -  | - | -65 | | -28 | - | - | - |
+| **Q10** | - | - | - | - | -22 | - | -  | - | - | -26 | | -33 | - | - |
+| **Q11** | - | - | - | -25 | - | - | -  | - | - | - | -31 | | -83 | - |
+| **Q12** | - | - | -148 | - | - | - | - | - | - | - | - | -46 | | -52 |
+| **Q13** | - | -205 | - | - | - | - | - | - | - | - | - | - | -53 | 
+
 
 
 ## Experimental Setup
