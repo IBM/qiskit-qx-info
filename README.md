@@ -2,7 +2,7 @@
 
 ## Organization
 
-The *IBMQ-device-information* repo contains information useful to QISKit users of the remote IBM Q backends.
+The *ibmq-device-information* repo contains information useful to QISKit users of the remote IBM Q backends.
 
 ### Backends
 The *backends* directory contains information about the remote IBM Q backends. At the moment there are documents for available hardware backends. Soon, we will update this to include specifications on various remote simulation backends. We anticipate the simulation backends to be community-driven as well, and we welcome the inclusion of new ones that can plug into our interface.
