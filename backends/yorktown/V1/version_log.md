@@ -7,13 +7,44 @@
 
 This document is a version log for the IBM Q experience **ibmqx2** backend for version 1.x.x. 
 
+# 1.2.0
+
+**Date**: January 15, 2019
+
+## Changes
+
+Warmed up and cooled down. Device connectivity is the same as V1.1.0
+
+## Device Specification
+
+The following tables shows some of the main experimental parameters for this device:
+
+| Qubit| &omega;<sup>R</sup><sub>i</sub>/2&pi; (GHz)| &omega;<sub>i</sub>/2&pi;  (GHz)| 
+|----|-------------|--------|
+| **Q0**  | 6.53051 | 5.2863   | 
+| **Q1**  | 6.48165 | 5.2380   | 
+| **Q2**  | 6.43618 | 5.0303   | 
+| **Q3**  | 6.57939 | 5.2956   | 
+| **Q4**  | 6.53023 | 5.0846   | 
+
+The relaxation (T<sub>1</sub>) and coherence (T<sub>2</sub>) times for each qubit are given in the following table. T<sub>2</sub> is measured with a Hahn echo experiment. These values are averaged over 160 measurements performed between January 11 and January 13 2019. The numbers in parentheses are standard errors of the mean.
+
+| \ |  Q0 |   Q1|  Q2 |Q3   |  Q4 |
+|:-:|---|---|---|---|---|
+|   T<sub>1</sub> (us) | 56.96 (0.41) |  58.28 (0.99)| 65.55 (0.38)| 67.56 (0.32) |  61.19 (0.38)|
+|   T<sub>2</sub> (us)| 53.90 (0.57)  | 27.89 (0.33) | 71.67 (1.20)| 37.09 (0.19) | 37.27 (0.29) |
+
+## Gate Specification
+ 
+All the GD has a gate time of 150 ns and the gate time of GF are {190, 190, 250, 250, 150, 240} ns for {CX0\_1, CX0\_2, CX1\_2, CX3\_2, CX3\_4, CX4\_2} respectively. There is an additional buffer of 8 ns after each GD or GF pulse. 
+
 # 1.1.0
 
 **Date**: December 12, 2017
 
 ## Changes
 
-Warmed up and cooled down. Device connectivity the same as V1.0.0
+Warmed up and cooled down. Device connectivity is the same as V1.0.0
 
 ## Device Specification
 
@@ -36,7 +67,7 @@ The relaxation (T<sub>1</sub>) and coherence (T<sub>2</sub>) times for each qubi
 
 ## Gate Specification
  
-All the GD has a gate time of 83ns and the gate time of GF are {190, 170, 230, 170, ,150, 240} ns for {CX0\_1, CX0\_2, CX1\_2, CX3\_2, CX3\_4, CX4\_2} respectively. There is an additional buffer of 7ns after each GD or GF pulse. 
+All the GD has a gate time of 83ns and the gate time of GF are {190, 170, 230, 170, 150, 240} ns for {CX0\_1, CX0\_2, CX1\_2, CX3\_2, CX3\_4, CX4\_2} respectively. There is an additional buffer of 7ns after each GD or GF pulse. 
 
 # 1.0.0
 
