@@ -7,6 +7,14 @@
 
 This document is a version log for the IBM Q experience **ibmqx2** backend for version 1.x.x. 
 
+# 1.3.0
+
+**Date**: March 13, 2019
+
+## Changes
+
+Warmed up and cooled down. Device connectivity is the same as V1.1.0
+
 # 1.2.0
 
 **Date**: January 15, 2019
