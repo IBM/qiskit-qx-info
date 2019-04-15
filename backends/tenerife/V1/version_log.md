@@ -7,6 +7,24 @@
 
 This document is a version log for the IBM Q experience **ibmqx4** backend for version 1.x.x. 
 
+# 1.4.0
+
+**Date**: April 11, 2019
+
+## Changes
+
+Device underwent a thermal cycle to room temperature and back to 20 mK.
+
+The following table shows the new qubit frequencies for this device:
+
+| Qubit | &omega;<sub>i</sub>/2&pi;  (GHz)| 
+|----|--------|
+| **Q0**  | 5.2464   | 
+| **Q1**  | 5.2983   | 
+| **Q2**  | 5.3383   | 
+| **Q3**  | 5.4261   | 
+| **Q4**  | 5.1745   | 
+
 # 1.3.0
 
 **Date**: July 5, 2018

@@ -8,6 +8,14 @@
 
 This document is a version log for the IBM Q experience **ibmq\_16\_melbourne** backend for version 1.x.x. 
 
+# 1.2.0
+
+**Date**: March 13, 2019
+
+## Changes
+
+Device was warmed up and cooled down again.
+
 # 1.1.0
 
 **Date**: November 15, 2018
