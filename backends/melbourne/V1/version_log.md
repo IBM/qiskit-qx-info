@@ -16,6 +16,54 @@ This document is a version log for the IBM Q experience **ibmq\_16\_melbourne** 
 
 Device was warmed up and cooled down again.
 
+## Device Specifications 
+
+The following table shows some of the typical experimental parameters for this device.
+
+| Qubit| &omega;<sup>R</sup><sub>i</sub>/2&pi; (GHz)       | &omega;<sub>i</sub>/2&pi;  (GHz)|
+|----|-------------|--------|
+| **Q0**  | 6.95518 | 5.1000 | 
+| **Q1**  | 7.05693 | 5.2386 | 
+| **Q2**  | 6.97179 | 5.0326 | 
+| **Q3**  | 7.04784 | 4.8962 | 
+| **Q4**  | 6.94523 | 5.0294 | 
+| **Q5**  | 7.07587 | 5.0672 | 
+| **Q6**  | 6.95297 | 4.9239 | 
+| **Q7**  | 6.96377 | 4.9746 | 
+| **Q8**  | 7.04930 | 4.7396 | 
+| **Q9**  | 6.96707 | 4.9634 | 
+| **Q10**  | 7.05513 | 4.9450 | 
+| **Q11**  | 6.95492 | 5.0050 |
+| **Q12**  | 7.06722| 4.7600 | 
+| **Q13**  | 6.94433 | 4.9685 | 
+
+## Gate Specification
+
+All the GD have a gate time of 100 ns, and the gate times for all GF pulses used in CX gates are given in the table below (rounded to nearest ns). There is an additional buffer of 20 ns after each GD or GF pulse. 
+
+| CX Gate | GF Gate Time (ns) |
+|----|----|
+| **CX1_0**   | 239 |
+| **CX1_2**   | 174 |
+| **CX2_3**   | 261 |
+| **CX4_3**  | 266 |
+| **CX5_4** | 300|
+| **CX5_6**   | 300|
+| **CX7_8**   | 220 |
+| **CX9_8**   | 434 |
+|**CX9_10**| 300 |
+|**CX11_10**| 261 |
+| **CX11_12**  | 261 |
+| **CX13_12**  | 300 |
+| **CX13_1**   | 652 |
+| **CX12_2**   | 1043 |
+| **CX11_3** | 286 |
+| **CX4_10**  | 261|
+| **CX5_9** | 348 |
+| **CX6_8**  | 348 |
+
+
+
 # 1.2.0
 
 **Date**: March 13, 2019
@@ -45,17 +93,17 @@ The following table shows some of the typical experimental parameters for this d
 | Qubit| &omega;<sup>R</sup><sub>i</sub>/2&pi; (GHz)       | &omega;<sub>i</sub>/2&pi;  (GHz)|
 |----|-------------|--------|
 | **Q0**  | 6.95518 | 5.1000 | 
-| **Q1**  | 7.05693 | 5.2386 | 
-| **Q2**  | 6.97179 | 5.0326 | 
-| **Q3**  | 7.04784 | 4.8962 | 
-| **Q4**  | 6.94523 | 5.0294 | 
-| **Q5**  | 7.07587 | 5.0672 | 
-| **Q6**  | 6.95297 | 4.9239 | 
-| **Q7**  | 6.96377 | 4.9746 | 
-| **Q8**  | 7.04930 | 4.7396 | 
-| **Q9**  | 6.96707 | 4.9634 | 
+| **Q1**  | 7.05693 | 5.2389 | 
+| **Q2**  | 6.97179 | 5.0330 | 
+| **Q3**  | 7.04784 | 4.8961 | 
+| **Q4**  | 6.94523 | 5.0272 | 
+| **Q5**  | 7.07587 | 5.0670 | 
+| **Q6**  | 6.95297 | 4.9238 | 
+| **Q7**  | 6.96377 | 4.9744 | 
+| **Q8**  | 7.04930 | 4.7447 | 
+| **Q9**  | 6.96707 | 4.9633 | 
 | **Q10**  | 7.05513 | 4.9450 | 
-| **Q11**  | 6.95492 | 5.0050 |
+| **Q11**  | 6.95492 | 5.0053 |
 | **Q12**  | 7.06722| 4.7600 | 
 | **Q13**  | 6.94433 | 4.9685 | 
 
@@ -112,11 +160,11 @@ All the GD have a gate time of 100 ns, and the gate times for all GF pulses used
 | **CX4_3**  | 266 |
 | **CX5_4** | 300|
 | **CX5_6**   | 300|
-| **CX7_8**   | 220 |
-| **CX9_8**   | 434 |
+| **CX7_8**   | 348 |
+| **CX9_8**   | 348 |
 |**CX9_10**| 300 |
 |**CX11_10**| 261 |
-| **CX11_12**  | 261 |
+| **CX11_12**  | 217 |
 | **CX13_12**  | 300 |
 | **CX13_1**   | 652 |
 | **CX12_2**   | 1043 |
