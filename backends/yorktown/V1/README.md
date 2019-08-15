@@ -3,7 +3,7 @@
 **display_name**: IBM Q 5 Yorktown  
 **backend_name**: ibmqx2  
 **backend_version**: 1.x.x   
-**sample_name**: sparrow 
+**sample_name**: canary 
 
 This document contains information about the IBM Q experience **ibmqx2** backend for version 1.x.x. 
 
