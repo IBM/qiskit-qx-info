@@ -3,7 +3,7 @@
 **display_name**: IBM Q 5 Tenerife  
 **backend_name**: ibmqx4  
 **backend_version**: 1.x.x   
-**sample_name**: raven 
+**sample_name**: canary 
 
 This document contains information about the IBM Q experience **ibmqx4** backend for version 1.x.x. 
 
